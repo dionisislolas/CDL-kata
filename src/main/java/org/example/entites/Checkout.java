@@ -31,11 +31,11 @@ public class Checkout {
             Item item = service.findItemBySku(sku);
             SpecialOffer specialOffer = pricingRules.getSpecialOffer(sku);
             if (quantity >= specialOffer.getQuantity()) {
-                int piliko = quantity / specialOffer.getQuantity();
-                int ipolipo = quantity % specialOffer.getQuantity();
-                runningTotal = runningTotal + specialOffer.getOfferPrice() * piliko;
+                int quotient = quantity / specialOffer.getQuantity();
+                int remainder = quantity % specialOffer.getQuantity();
+                runningTotal = runningTotal + specialOffer.getOfferPrice() * quotient;
 
-                for (int i=0; i<ipolipo; i++) {
+                for (int i=0; i<remainder; i++) {
                     runningTotal += item.getPrice();
                 }
 
