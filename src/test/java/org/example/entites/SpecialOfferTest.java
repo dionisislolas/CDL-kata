@@ -38,4 +38,5 @@ public class SpecialOfferTest {
     public void testToString() {
         assertFalse(specialOffer.toString().contains("@"));
     }
+
 }

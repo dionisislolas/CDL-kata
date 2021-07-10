@@ -1,5 +1,8 @@
 package org.example.entites;
 
+import static org.example.validations.Validate.validateOfferPrice;
+import static org.example.validations.Validate.validateQuantity;
+
 public class SpecialOffer {
     private int quantity;
     private int offerPrice;
@@ -38,17 +41,5 @@ public class SpecialOffer {
                 "quantity=" + quantity +
                 ", offerPrice=" + offerPrice +
                 '}';
-    }
-
-    private void validateQuantity(int quantity) {
-        if (quantity <= 0) {
-            throw new IllegalArgumentException("Illegal quantity: " + quantity);
-        }
-    }
-
-    private void validateOfferPrice(int offerPrice) {
-        if (offerPrice <= 0) {
-            throw new IllegalArgumentException("Illegal offer price: " + offerPrice);
-        }
     }
 }

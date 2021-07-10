@@ -1,5 +1,8 @@
 package org.example.entites;
 
+import static org.example.validations.Validate.validatePrice;
+import static org.example.validations.Validate.validateSku;
+
 public class Item {
     private String sku;
     private int price;
@@ -40,15 +43,4 @@ public class Item {
                 '}';
     }
 
-    private void validateSku(String sku) {
-        if (sku == null || sku.isEmpty()) {
-            throw new IllegalArgumentException("Sku is required");
-        }
-    }
-
-    private void validatePrice(int price) {
-        if (price <= 0) {
-            throw new IllegalArgumentException("Illegal price: " + price);
-        }
-    }
 }
