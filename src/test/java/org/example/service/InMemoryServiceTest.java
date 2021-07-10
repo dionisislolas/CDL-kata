@@ -4,9 +4,8 @@ import org.example.entites.Item;
 import org.example.exceptions.ItemNotFoundException;
 import org.junit.Before;
 import org.junit.Test;
-import sun.dc.pr.PRError;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class InMemoryServiceTest {
 
